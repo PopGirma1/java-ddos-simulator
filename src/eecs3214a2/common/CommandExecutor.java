@@ -51,7 +51,7 @@ public class CommandExecutor {
                 String parsedCommand = tk[0].toUpperCase();
                 String parsedArgument = tk.length == 2 ? tk[1] : "";
                 String[] arguments = parsedArgument.isEmpty() ? new String[0] : parsedArgument.split("\\s+");
-                String argumentList = arguments.length > 0 ? String.join(", ", arguments) : "";
+                String argumentList = arguments.length > 0 ? StringUtils.join(", ", arguments) : "";
                 // Get any argument supplied with the command
                 log.verb("Parsed command : %s Arguments: %s", parsedCommand, argumentList);
                 // Valid command?

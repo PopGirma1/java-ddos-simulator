@@ -63,7 +63,7 @@ public class ServerService extends Thread implements Closeable {
      * @throws IOException
      *      cannot acquire server socket
      */
-    public void listen(Class<? extends Agent> agentClass, int port, Object context) throws IOException {
+    public void listen(final Class<? extends Agent> agentClass, int port, final Object context) throws IOException {
         listen(new AgentFactory() {
             @Override
             public Agent createAgent(Map<String, Object> ctx) {
