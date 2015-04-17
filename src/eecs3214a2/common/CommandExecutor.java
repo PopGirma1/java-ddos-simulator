@@ -86,6 +86,7 @@ public class CommandExecutor {
                                 }
                             } catch (Exception e) {
                                 throwArgumentParseError(command, e);
+                                return;
                             }
                             // Populate classes
                             for (int i = 0; i < args.length; i++) {
@@ -118,16 +119,16 @@ public class CommandExecutor {
 
     // Exceptions
 
-    private void throwArgumentParseError(String command, Throwable e) {
+    protected void throwArgumentParseError(String command, Throwable e) {
         throw new IllegalArgumentException("Argument parse error. '" + command + "'.", e);
     }
-    private void throwArgumentMismatchError(String command, int argc) {
+    protected void throwArgumentMismatchError(String command, int argc) {
         throw new IllegalArgumentException("Arguments mismatched. '" + command + "'. Expected " + argc + ".");
     }
-    private void throwUnrecognizedCmd(String command) throws NoSuchMethodException {
+    protected void throwUnrecognizedCmd(String command) throws NoSuchMethodException {
         throw new NoSuchMethodException("Unrecognized command. '" + command + "'.");
     }
-    private void throwSyntaxError(String command) throws NoSuchMethodException {
+    protected void throwSyntaxError(String command) throws NoSuchMethodException {
         throw new NoSuchMethodException("Syntax error. '" + command + "'.");
     }
 

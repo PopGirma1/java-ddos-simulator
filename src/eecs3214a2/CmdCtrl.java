@@ -26,11 +26,22 @@ public class CmdCtrl extends CommandLine implements Closeable {
     private final Set<InetSocketAddress> attackers = new HashSet<>();
 
     public CmdCtrl() {
-        add("start", "listen(int)");
-        add("stop", "close");
-        add("attack", "issueAttack(String, int, String, long)");
-        add("list", "listAttackers()");
-        add("sync", "syncClocks()");
+        add("start", "listen(int)", "port",
+                "Starts the server and listens to registration from " +
+                "attackers at the given 'port' number.");
+        add("stop", "close", "",
+                "Stops the registrar server.");
+        add("attack", "issueAttack(String, int, String, long)",
+                "host port start duration",
+                "Broadcasts an attack instruction to all the attackers, " +
+                "given the 'host' name and 'port' number of the victim " +
+                "server, the attack 'start' date and time in ISO 8601 " +
+                "format and the attack 'duration' in seconds.");
+        add("list", "listAttackers()", "",
+                "Prints all the registered attackers.");
+        add("sync", "syncClocks()", "",
+                "Broadcasts an instruction to synchronize all " +
+                "of the attackers' clocks.");
     }
 
     /**

@@ -30,8 +30,11 @@ public class Victim extends CommandLine implements Closeable {
     public Victim(File logFile) throws IOException {
         this.L = Log.get("Victim", logFile);
         L.setLevel(Level.INFO);
-        add("start", "listen(int)");
-        add("stop", "close");
+        add("start", "listen(int)", "port",
+                "Starts the server and listens for incoming " +
+                "requests at the given 'port'.");
+        add("stop", "close", "",
+                "Stops the server.");
     }
 
     /**

@@ -37,11 +37,27 @@ public class Attacker extends CommandLine implements Closeable {
 
     public Attacker(String ccHost, int ccPort) {
         ccServerAddress = new InetSocketAddress(ccHost, ccPort);
-        add("start", "listen(int)");
-        add("stop", "close");
-        add("attack", "addAttack(String, int, String, long)");
-        add("list", "listAttacks()");
-        add("delay", "timeDelay()");
+        add("start", "listen(int)", "port",
+                "Starts the server and listens for instructions from " +
+                "the command-and-control system at the given 'port' " +
+                "number. Requires that command-and-control server is " +
+                "running.");
+        add("stop", "close", "",
+                "Stops the botnet server.");
+        add("attack", "addAttack(String, int, String, long)",
+                "host port start duration",
+                "Adds an attack to the list of attacks for scheduling " +
+                "to the attack the victims, given the 'host' name and " +
+                "'port' number of the victim server, the attack 'start' " +
+                "date and time in ISO 8601 format and the attack " +
+                "'duration' in seconds. Requires that the attacker " +
+                "server is started.");
+        add("list", "listAttacks()", "",
+                "Prints all the attacks scheduled.");
+        add("delay", "timeDelay()", "",
+                "Prints the time delay in the clock relative to the " +
+                "command-and-control server, disregarding the " +
+                "networking delays.");
     }
 
     /**

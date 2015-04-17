@@ -37,7 +37,7 @@ public class StringUtils {
             if (dlm.isEmpty()) {
                 dlm = delimiter.toString();
             }
-            sb.append(str);
+            sb.append(str == null ? "" : str);
         }
         return sb.toString();
     }
