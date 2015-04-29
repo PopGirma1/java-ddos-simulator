@@ -1,6 +1,11 @@
 # EECS3214-A2
 ## EECS 3214 (Computer Network Protocols and Applications) Assignment 2 [MIRROR]
 
+Copyright &copy; 2015. Vincent Chu.
+All rights reserved.
+
+Made available under the MIT License (http://opensource.org/licenses/MIT)
+
 ### Requirements
 
 The objective of this lab is to synchronize several clients to connect to a server 
