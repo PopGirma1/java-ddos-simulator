@@ -24,7 +24,7 @@ Have the server write the log of connections to a file.
 
 For details, see `REQUIREMENTS.html` or https://bitbucket.org/vwchu/eecs3214-a2/downloads/02.pdf
 
-Also see the `report.pdf` for implementation and design details.
+Also see the `report.pdf` for implementation, design, compilation and usage details.
 
 ### Note
 
