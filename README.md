@@ -1,5 +1,5 @@
-# EECS3214-A2
-## EECS 3214 (Computer Network Protocols and Applications) Assignment 2
+# EECS 3214: Computer Network Protocols and Applications
+## Assignment 2: Distributed Denial of Service Simulation: Victim, Attackers and Command-and-Control
 
 Copyright &copy; 2015. Vincent Chu.
 All rights reserved.
