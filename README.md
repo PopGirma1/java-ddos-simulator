@@ -1,5 +1,5 @@
 # EECS3214-A2
-## EECS 3214 (Computer Network Protocols and Applications) Assignment 2 [MIRROR]
+## EECS 3214 (Computer Network Protocols and Applications) Assignment 2
 
 Copyright &copy; 2015. Vincent Chu.
 All rights reserved.
@@ -27,9 +27,9 @@ Record the times of opening the connections at the server as accurately as you c
 Keep each connection alive 10-30 seconds to allow overlap between connections.
 Have the server write the log of connections to a file.
 
-For details, see `REQUIREMENTS.html` or https://bitbucket.org/vwchu/eecs3214-a2/downloads/02.pdf
+For details, see [02.pdf](02.pdf)
 
-Also see the `report.pdf` for implementation, design, compilation and usage details.
+Also see the [report.pdf](report.pdf) for implementation, design, compilation and usage details.
 
 ### Note
 
